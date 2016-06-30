@@ -21,6 +21,7 @@ public class test {
         }
 // 激活的线程数加倍
         int estimatedSize = topGroup.activeCount() * 2;
+
         Thread[] slackList = new Thread[estimatedSize];
 // 获取根线程组的所有线程
         int actualSize = topGroup.enumerate(slackList);
