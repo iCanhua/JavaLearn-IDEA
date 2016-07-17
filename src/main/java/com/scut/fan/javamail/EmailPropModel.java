@@ -15,7 +15,7 @@ public class EmailPropModel implements EmailPropFormat{
 	String MailSmtpPort;
 	String SenderEmailPwd;
 	String SenderEmail;
-	static final String propPath="./EmailPropModel.properties";
+	static final String propPath= "/javamail/EmailPropModel.properties";
 	String isAuth="true";
 	
 	public EmailPropModel(){
@@ -25,8 +25,6 @@ public class EmailPropModel implements EmailPropFormat{
 		Properties prop = new Properties(); //配置文件读取器
 		InputStream in=EmailUtils.class.getResourceAsStream(propPath);//装载流
 		try {
-		
-			System.out.println(in+"不知道会输出什么呢");
 			prop.load(in);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
